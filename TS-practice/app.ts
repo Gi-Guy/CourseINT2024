@@ -60,3 +60,21 @@ if (number1toHypotenous && number2toHypotenous) {//check if the user entered the
         alert('Please enter valid numbers');
     }
 }
+
+
+// class practices  05/01/2025
+const userAge = Number(prompt("What is your age?"));
+const userHeightInCm = Number(prompt("What is your height? (cm)"));
+
+// Logic:
+// Older than 8 y/o
+// At least 140cm tall
+// Or above 18 y/o
+
+// Output: "You can board the ride!" or "Go home"
+
+if ((userAge >= 8 && userHeightInCm >= 140) || userAge >= 18) {
+  alert("You can board the ride!");
+} else {    
+    alert("Go home");
+}
