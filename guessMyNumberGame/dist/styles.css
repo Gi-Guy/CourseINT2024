@@ -1,0 +1,68 @@
+:root {
+  --color-primary: #0077cc;
+  --color-secondary: #fff;
+  --color-bg: #f4f4f9;
+  --border-radius: 5px;
+  --spacing: 1rem;
+  --font-size-base: 16px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: var(--font-size-base);
+  background-color: var(--color-bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing);
+  padding: var(--spacing);
+  background: var(--color-secondary);
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.button-group {
+  display: flex;
+  gap: var(--spacing);
+}
+
+.hidden {
+  display: none;
+}
+
+.button {
+  padding: 0.5rem 1rem;
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.input {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: var(--border-radius);
+  width: 100%;
+}
+
+.label {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}

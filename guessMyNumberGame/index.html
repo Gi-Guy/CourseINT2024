@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess My Number Game</title>
+    <link rel="stylesheet" href="dist/styles.css">
+</head>
+<body>
+    <main class="container">
+        <div class="button-group">
+            <button id="start-game" class="button">Start Game</button>
+            <button id="stop-game" class="button">Stop Game</button>
+            <button id="settings" class="button">Settings</button>
+        </div>
+        <div id="game-area" class="game-area hidden">
+            <label for="guess-input" class="label">Enter your guess:</label>
+            <input id="guess-input" type="number" min="1" max="10" class="input">
+            <button id="submit-guess" class="button">Submit Guess</button>
+        </div>
+        <div id="settings-area" class="settings-area hidden">
+            <label for="tries-input" class="label">Set number of tries:</label>
+            <input id="tries-input" type="number" class="input">
+            <button id="save-settings" class="button">Save Settings</button>
+        </div>
+    </main>
+    <script src="dist/guessMyNumberGame.js"></script>
+</body>
+</html>
