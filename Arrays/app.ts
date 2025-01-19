@@ -10,3 +10,21 @@ function getMinNumber(arr: number[]): number {
 }
 alert(getMaxNumber(numbers));
 alert(getMinNumber(numbers));
+
+function getAverage(arr: number[]): number {
+    let sum: number = 0;
+    for (let i = 0; i < arr.length; i++) {
+        sum += arr[i];
+    }
+    return sum / arr.length;
+}
+alert("the average is: " + getAverage(numbers));
+
+function getSum(arr: number[]): number {
+    let sum: number = 0;
+    for (let i = 0; i < arr.length; i++) {
+        sum += arr[i];
+    }
+    return sum;
+}
+alert("the sum is: " + getSum(numbers));

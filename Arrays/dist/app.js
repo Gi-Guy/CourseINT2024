@@ -10,3 +10,19 @@ function getMinNumber(arr) {
 }
 alert(getMaxNumber(numbers));
 alert(getMinNumber(numbers));
+function getAverage(arr) {
+    var sum = 0;
+    for (var i = 0; i < arr.length; i++) {
+        sum += arr[i];
+    }
+    return sum / arr.length;
+}
+alert("the average is: " + getAverage(numbers));
+function getSum(arr) {
+    var sum = 0;
+    for (var i = 0; i < arr.length; i++) {
+        sum += arr[i];
+    }
+    return sum;
+}
+alert("the sum is: " + getSum(numbers));
