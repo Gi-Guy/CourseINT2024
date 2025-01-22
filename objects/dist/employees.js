@@ -13,9 +13,19 @@ function getEmployee() {
 }
 function start() {
     var employees = [];
-    for (var i = 0; i < 5; i++) {
+    for (var i = 0; i < 2; i++) {
         employees.push(getEmployee());
     }
-    alert(employees.map(function (employee) { return "Name: " + employee.name + ", Age: " + employee.age + ", Department: " + (employee.department || 'N/A') + ", Salary: " + employee.sallary; }).join('\n'));
+    alert("Highest salary:" + Math.max.apply(Math, employees.map(function (employee) { return employee.sallary; })));
+    alert("Lowest salary:" + Math.min.apply(Math, employees.map(function (employee) { return employee.sallary; })));
+    alert("Average salary:" +
+        employees.reduce(function (acc, employee) { return acc + employee.sallary; }, 0) /
+            employees.length);
+    // List of all employees
+    alert(employees
+        .map(function (employee) {
+        return "Name: " + employee.name + ", Age: " + employee.age + ", Department: " + (employee.department || "N/A") + ", Salary: " + employee.sallary;
+    })
+        .join("\n"));
 }
 start();
