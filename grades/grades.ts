@@ -9,12 +9,10 @@
 // }
 
 function getNumbers() {
-  let toContinue = true;
+  let toContinue = confirm("Do you want to play?");
   const number2: number[] = [];
-  let index = 0;
   while (toContinue) {
-    number2[index] = Number(prompt("Please enter a number"));
-    index++;
+    number2[number2.length] = Number(prompt("Please enter a number"));
     toContinue = confirm("Do you want to continue?");
   }
 
@@ -24,4 +22,49 @@ function getNumbers() {
   //     alert(number2[i]);
   // }
 }
-getNumbers();
+//getNumbers();
+
+function subStringFromArray() {
+  let toContinue = confirm("Do you want to play?");
+  const stringArray: string[] = [];
+  while (toContinue) {
+    const input = prompt("Please enter a string");
+    stringArray[stringArray.length] = input !== null ? input : "";
+    toContinue = confirm("Do you want to continue?");
+  }
+  if (stringArray.length > 0) {
+    let n: number = Number(
+      prompt("Please enter a number between 0 to " + (stringArray.length - 1))
+    );
+    if (n < 0 || n >= stringArray.length) {
+      while (n < 0 || n >= stringArray.length) {
+        n = Number(
+          prompt(
+            "Please enter a valid number between 0 to " +
+              (stringArray.length - 1)
+          )
+        );
+      }
+      alert(stringArray[n]);
+    } else alert(stringArray[n]);
+  }
+}
+subStringFromArray();
+
+
+function sortNumbers() {
+    let toContinue = confirm("Do you want to play?");
+    const numberArray: number[] = [];
+    for (let i = 0; i < 10; i++) {
+        numberArray[i] = Number(prompt("Please enter a number"));
+    }
+    for (let i = 0; i < numberArray.length; i++) {
+        for (let j = i + 1; j < numberArray.length; j++) {
+            if (numberArray[i] > numberArray[j]) {
+                let temp = numberArray[i];
+                numberArray[i] = numberArray[j];
+                numberArray[j] = temp;
+            }
+        }
+    }
+}
