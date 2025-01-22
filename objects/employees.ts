@@ -24,6 +24,7 @@ function getEmployee(): Employee {
 function start() {
   const employees: Employee[] = [];
   const maxEmployees = 5;
+  // Get employees
   for (let i = 0; i < maxEmployees; i++) {
     employees.push(getEmployee());
   }
@@ -41,7 +42,7 @@ function start() {
         employees.length
   );
 
-  // List of all employees
+  // print all employees
   alert(
     employees
       .map(

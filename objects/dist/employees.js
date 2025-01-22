@@ -14,6 +14,7 @@ function getEmployee() {
 function start() {
     var employees = [];
     var maxEmployees = 5;
+    // Get employees
     for (var i = 0; i < maxEmployees; i++) {
         employees.push(getEmployee());
     }
@@ -22,7 +23,7 @@ function start() {
     alert("Average salary:" +
         employees.reduce(function (acc, employee) { return acc + employee.sallary; }, 0) /
             employees.length);
-    // List of all employees
+    // print all employees
     alert(employees
         .map(function (employee) {
         return "Name: " + employee.name + ", Age: " + employee.age + ", Department: " + (employee.department || "N/A") + ", Salary: " + employee.sallary;
