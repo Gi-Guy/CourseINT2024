@@ -13,7 +13,8 @@ function getEmployee() {
 }
 function start() {
     var employees = [];
-    for (var i = 0; i < 2; i++) {
+    var maxEmployees = 5;
+    for (var i = 0; i < maxEmployees; i++) {
         employees.push(getEmployee());
     }
     alert("Highest salary:" + Math.max.apply(Math, employees.map(function (employee) { return employee.sallary; })));

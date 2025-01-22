@@ -23,7 +23,8 @@ function getEmployee(): Employee {
 
 function start() {
   const employees: Employee[] = [];
-  for (let i = 0; i < 2; i++) {
+  const maxEmployees = 5;
+  for (let i = 0; i < maxEmployees; i++) {
     employees.push(getEmployee());
   }
   alert(
