@@ -31,3 +31,23 @@ function start() {
         .join("\n"));
 }
 start();
+// from class, not working here
+// function findEmployeeByName(name: string){
+//     let employee: Employee | undefined;
+//     for (const key of employees) {
+//         if (key.name === name) {
+//             return key;
+//         }
+//     }
+// }
+// function deleteEmployee(name: string){
+//     let employee = findEmployeeByName(name);
+//     while(employee === undefined){
+//         alert("Employee not found");
+//         name = prompt("Please enter employee name");   
+//         employee = findEmployeeByName(name);
+//     }
+//     employees.splice(employees.indexOf(employee), 1);
+//     alert("Employee deleted");
+// }
+// deleteEmployee(prompt("Please enter employee name"));
