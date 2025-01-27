@@ -1,0 +1,65 @@
+// הגדרות כלליות
+:root {
+    --gap: 1rem;
+    --radius: 8px;
+    --color-bg: #f8f9fa;
+    --color-card: #ffffff;
+    --color-text: #333;
+    --color-done: #d4edda;
+    --color-pending: #f8d7da;
+}
+
+// קומפוזיציה - סידור מבנה
+.layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--gap);
+    padding: 2rem;
+    background-color: var(--color-bg);
+    
+    &__title {
+        font-size: 2rem;
+        font-weight: bold;
+    }
+}
+
+// גריד של ה-TODOs
+.todo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--gap);
+    width: 100%;
+    max-width: 800px;
+}
+
+// בלוק – משימה בודדת
+.todo-card {
+    padding: 1rem;
+    background: var(--color-card);
+    border-radius: var(--radius);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+
+    &:hover {
+        transform: scale(1.02);
+    }
+
+    &__title {
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+
+    &__description {
+        font-size: 1rem;
+        color: var(--color-text);
+    }
+
+    &--done {
+        background-color: var(--color-done);
+    }
+
+    &--pending {
+        background-color: var(--color-pending);
+    }
+}
