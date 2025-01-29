@@ -6,11 +6,11 @@ type Todo = {
 }
 
 // create new todo mission
-function createTodo(title: string): Todo {
+function createTodo(title: string, description: string): Todo {
     return {
         id: Math.random(),
         title,
-        description: '',
+        description,
         done: false
     }
 }
@@ -42,6 +42,9 @@ function updateDescription(todo: Todo, description: string): Todo {
 
 function filterTodos(todos: Todo[], status: boolean): Todo[] {
     return todos.filter(todo => todo.done === status);
+}
+function deleteTodoById(todos: Todo[], id: number): Todo[] {
+    return todos.filter(todo => todo.id !== id);
 }
 function start() {
     console.clear();

@@ -10,11 +10,11 @@ var __assign = (this && this.__assign) || function () {
     return __assign.apply(this, arguments);
 };
 // create new todo mission
-function createTodo(title) {
+function createTodo(title, description) {
     return {
         id: Math.random(),
         title: title,
-        description: '',
+        description: description,
         done: false
     };
 }
@@ -32,6 +32,9 @@ function updateDescription(todo, description) {
 }
 function filterTodos(todos, status) {
     return todos.filter(function (todo) { return todo.done === status; });
+}
+function deleteTodoById(todos, id) {
+    return todos.filter(function (todo) { return todo.id !== id; });
 }
 function start() {
     console.clear();
