@@ -38,34 +38,18 @@ export let inventory: Inventory = [];
 
 export function addItem(item: Item) {
     if (items.some((i) => i.id === item.id)) {
-        return false;
+        return `Id "${item.id}" already exists`;
     }
+
     items.push(item);
+
+    return "Success";
 }
 
-export function addToStock(itemId: string, amount: number) {
-    const existing = stock.find((item) => item.itemId === itemId);
-    if (existing) {
-        existing.quantity += amount;
-    } else {
-        stock.push({ itemId, quantity: amount });
-    }
-}
+export function addToStock(itemId: string, amount: number) {}
 
-export function consume(itemId: string, quantity: number) {
-    const existing = stock.find((item) => item.itemId === itemId);
-    if (existing) {
-        existing.quantity -= quantity;
-    }
-}
+export function consume(itemId: string, quantity: number) {}
 
-export function acquire(itemId: string, serial: string) {
-    inventory.push({ itemId, serial });
-}
+export function acquire(itemId: string, serial: string) {}
 
-export function decomission(serial: string) {
-    const index = inventory.findIndex((item) => item.serial === serial);
-    if (index >= 0) {
-        inventory.splice(index, 1);
-    }
-}
+export function decomission(serial: string) {}
